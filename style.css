@@ -5,7 +5,7 @@
 }
 
 .container {
-    outline: 1px solid red; /* чтобы контейнер был виден, в конце можно будет удалить это св-во */
+    /* outline: 1px solid red; чтобы контейнер был виден, в конце можно будет удалить это св-во */
     margin: 0 auto;
     width: 100%;
     max-width: 1140px;
@@ -70,6 +70,9 @@ header span {
 }
 
 .about-section .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
     /* 📍 Свойствa flexbox для отступов между элементами select, .info-wrapper и .skills-wrapper  */
 }
 
@@ -88,6 +91,9 @@ select {
 
 select:hover,
 .text-field:hover {
+    cursor: pointer;
+    border: 1px solid #2965f1;
+
     /* 📍 Стили для выпадающего списка и текстового поля при наведении курсора */
 }
 
@@ -110,6 +116,10 @@ select:hover,
 
 .frameworks-list,
 .books-list {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    justify-content: space-around;
     /* 📍 Свойства flexbox для отступов между элементами в списках */
 }
 
@@ -121,10 +131,16 @@ select:hover,
 }
 
 .skills-block {
+    display: flex;
+    flex-direction: column-reverse;
     /* 📍 Свойства flexbox для расположения формы над элементами с классом .label */
 }
 
 .skills {
+    min-width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     /* 📍 Свойства flexbox для расположения элементов с классом .label */
 }
 
@@ -167,6 +183,8 @@ form {
 }
 
 .btn:hover {
+    cursor: pointer;
+    background: rgba(41, 101, 241, 0.9);
     /* 📍 Стили для кнопки при наведении курсора */
 }
 
@@ -189,6 +207,7 @@ th, td {
 footer {
     background-color: rgba(163, 167, 255, 0.3);
     padding: 26px 0;
+    text-align: center;
     /* 📍 Свойство для расположения ссылки горизонтально по центру */
 }
 
@@ -200,5 +219,7 @@ footer {
 }
 
 .footer-link:hover {
+    cursor: pointer;
+    text-decoration: underline;
     /* 📍 Стили для ссылки при наведении курсора */
 }
